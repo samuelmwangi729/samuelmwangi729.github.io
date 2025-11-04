@@ -1,7 +1,8 @@
 ---
-layout: resume
+layout: page
+title: my resume
 icon: fas fa-book
-order: 2
+order: 1
 ---
 # Samuel Mwangi
 
