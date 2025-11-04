@@ -1,3 +1,8 @@
+---
+layout: tags
+icon: fas fa-book
+order: 2
+---
 # Samuel Mwangi
 
 **Email:** samuelmwangi729@gmail.com | **GitHub:** [samuelmwangi729](https://github.com/samuelmwangi729) | **Freelancer:** [Profile](https://www.freelancer.com/u/samuel729)  
