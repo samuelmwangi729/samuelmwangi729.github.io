@@ -1,5 +1,5 @@
 ---
-layout: tags
+layout: resume
 icon: fas fa-book
 order: 2
 ---
