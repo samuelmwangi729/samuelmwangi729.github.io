@@ -64,7 +64,7 @@ order: 1
 - **Data Analysis Certificate**, ALX  
 - **AWS Cloud Practitioner Certification**  
 - **AWS Solutions Architect – Associate**  
-- [Your degree or high school details here if applicable]
+- **Bachelor of Science with Education (Computer& Mathematics)**
 
 ---
 
