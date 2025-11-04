@@ -15,6 +15,7 @@ description: >-
   and a passionate Freelance Software Developer with 5+ years of experience in Cybersecurity. 
   Currently focusing on MERN stack development, cloud computing, and AI.
 
+# The base URL for your site
 url: "https://samuelmwangi729.github.io"
 baseurl: ""
 
@@ -42,7 +43,7 @@ webmaster_verifications:
   baidu:
   facebook:
 
-# --- Analytics (optional, can add later) ---
+# --- Analytics (optional) ---
 analytics:
   google:
     id:
@@ -65,8 +66,13 @@ pageviews:
 # --- Appearance ---
 theme_mode: dark
 cdn:
-avatar: "/assets/img/avatar.png"
-social_preview_image: "/assets/img/social-preview.png"
+
+# ✅ Your GitHub Avatar
+avatar: "https://avatars.githubusercontent.com/u/42680795?s=400&u=490593d6e11537e90397cc5f182846b24d158904&v=4"
+
+# You can customize or replace this preview image
+social_preview_image: "https://avatars.githubusercontent.com/u/42680795?s=400&u=490593d6e11537e90397cc5f182846b24d158904&v=4"
+
 toc: true
 
 # --- Comments (optional setup later) ---
