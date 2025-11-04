@@ -9,7 +9,7 @@ timezone: Africa/Nairobi
 
 # --- SEO & Site Information ---
 title: "Samuel Mwangi"
-tagline: "High School Teacher | Software Developer | Cybersecurity Enthusiast"
+tagline: "Teacher | Cybersecurity Analyst| Data Scientist| Backend Engineer| AWS CCP | AWS Solutions Architect"
 description: >-
   I'm a High School Teacher specializing in Computer Science and Mathematics, 
   and a passionate Freelance Software Developer with 5+ years of experience in Web applications development. 
@@ -24,13 +24,13 @@ github:
   username: samuelmwangi729
 
 twitter:
-  username: samuel_mwangi
+  username: mwangi_sam_729
 
 social:
   name: Samuel Mwangi
-  email: bh4534927@gmail.com
+  email: samuelmwangi729@gmail.com
   links:
-    - https://twitter.com/samuel_mwangi
+    - https://twitter.com/mwangi_sam_729
     - https://github.com/samuelmwangi729
     - https://www.linkedin.com/in/samuel-mwangi
 
