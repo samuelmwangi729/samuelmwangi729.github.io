@@ -1,6 +1,7 @@
 ---
 layout: page
-title: "Categories"
+title: "Skills"
+icon: fas fa-list
 permalink: /categories/
 ---
 
