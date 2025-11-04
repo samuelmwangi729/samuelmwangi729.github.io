@@ -1,19 +1,157 @@
 ---
-layout: home
-title: "Hi, I'm Samuel 👋"
+layout: default
+title: "Hi, I'm Samuel Mwangi 👋"
 ---
 
-<div align="center">
-  <img src="https://avatars.githubusercontent.com/u/42680795?s=400&v=4" alt="banner img" width="150" style="border-radius: 50%;" />
-  <h1>Hi there, I'm Samuel 👋</h1>
-  <p><strong>Teacher | Software Developer | Cybersecurity Enthusiast</strong></p>
+<style>
+  body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f2f2f2;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 850px;
+    margin: 80px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  }
+
+  img.avatar {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    border: 4px solid #61dafb;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  img.avatar:hover {
+    transform: scale(1.05);
+  }
+
+  h1 {
+    font-size: 2.4em;
+    color: #61dafb;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-weight: 400;
+    color: #dcdcdc;
+    margin-top: 0;
+  }
+
+  p {
+    font-size: 1.05em;
+    line-height: 1.7em;
+    color: #e6e6e6;
+    margin: 20px 0;
+  }
+
+  .roles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0;
+  }
+
+  .role {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 25px;
+    border-radius: 8px;
+    margin: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .role:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+  }
+
+  .btn-group {
+    margin-top: 30px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #61dafb, #007acc);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .btn:hover {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    transform: scale(1.05);
+  }
+
+  footer {
+    margin-top: 60px;
+    font-size: 0.9em;
+    color: #aaaaaa;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      margin: 40px 20px;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+  }
+</style>
+
+<div class="container">
+  <img
+    class="avatar"
+    src="https://avatars.githubusercontent.com/u/42680795?s=400&u=490593d6e11537e90397cc5f182846b24d158904&v=4"
+    alt="Samuel Mwangi Avatar"
+  />
+
+  <h1>Hi there, I'm Samuel Mwangi 👋</h1>
+  <h2>Teacher • Software Developer • Cybersecurity Enthusiast</h2>
 
   <p>
-    I'm a <strong>High School Teacher</strong> specializing in <strong>Computer Science</strong> and <strong>Mathematics</strong>,
-    with over <strong>5 years of experience in Cybersecurity</strong>. Currently, I’m diving deep into the
-    <strong>MERN stack</strong> and building scalable web applications.
+    I’m a passionate <strong>High School Teacher</strong> specializing in <strong>Computer Science</strong> and
+    <strong>Mathematics</strong> — as well as a <strong>Freelance Software Developer</strong> and lifelong learner.
   </p>
 
-  <a href="/about/" class="btn btn--primary">About Me</a>
-  <a href="mailto:bh4534927@gmail.com" class="btn btn--light">Contact</a>
+  <div class="roles">
+    <div class="role">👨‍🏫 High School Teacher</div>
+    <div class="role">💻 Software Developer</div>
+    <div class="role">🔒 Cybersecurity Specialist</div>
+    <div class="role">📊 Data Analyst (ALX Certified)</div>
+    <div class="role">🧠 Data Science Learner</div>
+  </div>
+
+  <p>
+    With over 5 years of experience in <strong>Cybersecurity</strong> and full-stack development, I’ve built
+    secure, scalable systems using the <strong>MERN stack</strong>, <strong>Python</strong>, and
+    <strong>AWS</strong>. I’m now exploring <strong>Data Science</strong> to bridge technology and intelligence.
+  </p>
+
+  <div class="btn-group">
+    <a href="/about/" class="btn">About Me</a>
+    <a href="mailto:bh4534927@gmail.com" class="btn">Contact</a>
+    <a href="https://www.freelancer.com/u/samuelmwangi729" class="btn" target="_blank">Freelancer Profile</a>
+    <a href="https://github.com/samuelmwangi729" class="btn" target="_blank">GitHub</a>
+  </div>
+
+  <footer>
+    <p>“The best way to predict the future is to invent it.” – Alan Kay</p>
+    <p>© 2025 Samuel Mwangi</p>
+  </footer>
 </div>
