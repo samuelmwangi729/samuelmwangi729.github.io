@@ -6,7 +6,7 @@ order: 1
 ---
 # Samuel Mwangi
 
-**Email:** samuelmwangi729@gmail.com | **GitHub:** [samuelmwangi729](https://github.com/samuelmwangi729) | **Freelancer:** [Profile](https://www.freelancer.com/u/samuel729)  
+**Email:** samuelmwangi729@gmail.com | **GitHub:** [samuelmwangi729](https://github.com/samuelmwangi729) | **Freelancer:** [Profile](https://www.freelancer.com/u/SAMWEL729)  
 
 ![Profile Picture](https://avatars.githubusercontent.com/u/42680795?s=400&u=490593d6e11537e90397cc5f182846b24d158904&v=4)
 
