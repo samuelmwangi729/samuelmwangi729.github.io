@@ -1,751 +1,159 @@
 ---
 layout: default
-title: "Samuel Mwangi | Developer & Cybersecurity"
+title: "Samuel Mwangi"
 ---
-
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-
-  :root {
-    --bg: #080d18;
-    --surface: #101827;
-    --surface-light: #151f31;
-    --text: #f1f5f9;
-    --muted: #9ba9bd;
-    --accent: #60a5fa;
-    --accent-bright: #38bdf8;
-    --border: rgba(148, 163, 184, 0.16);
-  }
-
-  .portfolio,
-  .portfolio * {
-    box-sizing: border-box;
-  }
-
-  .portfolio {
-    min-height: 100vh;
+  body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f2f2f2;
+    text-align: center;
     margin: 0;
-    padding: 0 24px;
-    background:
-      radial-gradient(ellipse at 15% 5%, rgba(37, 99, 235, 0.12), transparent 38%),
-      radial-gradient(ellipse at 90% 35%, rgba(14, 165, 233, 0.07), transparent 32%),
-      var(--bg);
-    color: var(--text);
-    font-family: "DM Sans", -apple-system, BlinkMacSystemFont,
-      "Segoe UI", sans-serif;
-    line-height: 1.7;
+    padding: 0;
   }
 
-  .portfolio a {
-    color: inherit;
+  .container {
+    max-width: 850px;
+    margin: 80px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
   }
 
-  .portfolio a:focus-visible {
-    outline: 3px solid var(--accent-bright);
-    outline-offset: 5px;
-  }
-
-  .portfolio .site-header,
-  .portfolio .hero,
-  .portfolio .section,
-  .portfolio .site-footer {
-    width: 100%;
-    max-width: 1080px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  /* Navigation */
-
-  .portfolio .site-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 24px 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .portfolio .brand {
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 1.15rem;
-    font-weight: 700;
-    text-decoration: none;
-    letter-spacing: -0.04em;
-  }
-
-  .portfolio .brand span {
-    color: var(--accent);
-  }
-
-  .portfolio .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 25px;
-  }
-
-  .portfolio .nav-links a {
-    color: var(--muted);
-    font-size: 0.9rem;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  .portfolio .nav-links a:hover {
-    color: var(--accent-bright);
-  }
-
-  /* Hero */
-
-  .portfolio .hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1.5fr) minmax(230px, 0.7fr);
-    align-items: center;
-    gap: 65px;
-    padding: 100px 0 90px;
-  }
-
-  .portfolio .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin: 0 0 22px;
-    color: var(--accent-bright);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-  }
-
-  .portfolio .eyebrow::before {
-    width: 25px;
-    height: 2px;
-    background: var(--accent-bright);
-    content: "";
-  }
-
-  .portfolio h1,
-  .portfolio h2,
-  .portfolio h3 {
-    font-family: "Space Grotesk", sans-serif;
-    line-height: 1.2;
-  }
-
-  .portfolio .hero h1 {
-    margin: 0;
-    font-size: clamp(2.8rem, 6vw, 4.7rem);
-    font-weight: 700;
-    letter-spacing: -0.065em;
-  }
-
-  .portfolio .hero h1 span {
-    display: block;
-    color: var(--accent);
-  }
-
-  .portfolio .hero-subtitle {
-    margin: 22px 0 0;
-    color: #d1dbea;
-    font-size: clamp(1.05rem, 2vw, 1.25rem);
-    font-weight: 500;
-  }
-
-  .portfolio .hero-description {
-    max-width: 600px;
-    margin: 20px 0 0;
-    color: var(--muted);
-    font-size: 1rem;
-    line-height: 1.9;
-  }
-
-  .portfolio .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 32px;
-  }
-
-  .portfolio .button {
-    display: inline-flex;
-    min-height: 46px;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    padding: 11px 19px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background: var(--surface);
-    color: var(--text);
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition:
-      transform 0.2s ease,
-      background 0.2s ease,
-      border-color 0.2s ease;
-  }
-
-  .portfolio .button:hover {
-    transform: translateY(-2px);
-    border-color: rgba(96, 165, 250, 0.6);
-    background: var(--surface-light);
-  }
-
-  .portfolio .button-primary {
-    border-color: var(--accent);
-    background: var(--accent);
-    color: #07111f;
-  }
-
-  .portfolio .button-primary:hover {
-    border-color: var(--accent-bright);
-    background: var(--accent-bright);
-  }
-
-  /* Profile image */
-
-  .portfolio .profile-wrap {
-    position: relative;
-    width: 100%;
-    max-width: 300px;
-    justify-self: end;
-  }
-
-  .portfolio .profile-frame {
-    position: relative;
-    overflow: hidden;
-    padding: 9px;
-    border: 1px solid rgba(96, 165, 250, 0.4);
-    border-radius: 22px;
-    background: linear-gradient(
-      145deg,
-      rgba(96, 165, 250, 0.17),
-      rgba(15, 23, 42, 0.7)
-    );
-    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
-    transform: rotate(2deg);
+  img.avatar {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    border: 4px solid #61dafb;
+    margin-bottom: 20px;
     transition: transform 0.3s ease;
   }
 
-  .portfolio .profile-frame:hover {
-    transform: rotate(0deg) translateY(-4px);
+  img.avatar:hover {
+    transform: scale(1.05);
   }
 
-  .portfolio .avatar {
-    display: block;
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    border-radius: 15px;
-    object-fit: cover;
-    object-position: center;
+  h1 {
+    font-size: 2.4em;
+    color: #61dafb;
+    margin-bottom: 10px;
   }
 
-  .portfolio .profile-caption {
-    margin: 20px 0 0;
-    color: var(--muted);
-    font-size: 0.82rem;
-    text-align: center;
+  h2 {
+    font-weight: 400;
+    color: #dcdcdc;
+    margin-top: 0;
   }
 
-  .portfolio .profile-caption strong {
-    color: var(--text);
-    font-weight: 600;
+  p {
+    font-size: 1.05em;
+    line-height: 1.7em;
+    color: #e6e6e6;
+    margin: 20px 0;
   }
 
-  /* Sections */
-
-  .portfolio .section {
-    padding: 65px 0;
-    border-top: 1px solid var(--border);
+  .roles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0;
   }
 
-  .portfolio .section-heading {
-    margin-bottom: 35px;
+  .role {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 8px;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
   }
 
-  .portfolio .section-label {
-    margin: 0 0 10px;
-    color: var(--accent);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+  .role:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
   }
 
-  .portfolio .section-heading h2 {
-    margin: 0;
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-    letter-spacing: -0.045em;
+  .btn-group {
+    margin-top: 30px;
   }
 
-  .portfolio .section-heading > p:last-child {
-    max-width: 650px;
-    margin: 14px 0 0;
-    color: var(--muted);
-  }
-
-  .portfolio .about-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.3fr) minmax(220px, 0.7fr);
-    gap: 30px;
-  }
-
-  .portfolio .about-copy {
-    margin: 0;
-    color: #bdc9da;
-    line-height: 1.95;
-  }
-
-  .portfolio .about-copy strong {
-    color: var(--text);
-  }
-
-  .portfolio .focus-card {
-    padding: 24px;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: rgba(16, 24, 39, 0.8);
-  }
-
-  .portfolio .focus-card h3 {
-    margin: 0 0 16px;
-    font-size: 1.05rem;
-  }
-
-  .portfolio .focus-card p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 0.92rem;
-  }
-
-  /* Expertise cards */
-
-  .portfolio .expertise-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-  }
-
-  .portfolio .expertise-card {
-    padding: 25px 22px;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: linear-gradient(
-      145deg,
-      rgba(21, 31, 49, 0.9),
-      rgba(12, 19, 32, 0.9)
-    );
-    transition:
-      transform 0.2s ease,
-      border-color 0.2s ease;
-  }
-
-  .portfolio .expertise-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(96, 165, 250, 0.5);
-  }
-
-  .portfolio .card-number {
+  .btn {
     display: inline-block;
-    margin-bottom: 20px;
-    color: var(--accent);
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 0.85rem;
-    font-weight: 700;
-  }
-
-  .portfolio .expertise-card h3 {
-    margin: 0 0 12px;
-    font-size: 1.12rem;
-  }
-
-  .portfolio .expertise-card p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 0.91rem;
-    line-height: 1.8;
-  }
-
-  /* Skills */
-
-  .portfolio .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .portfolio .skills-list li {
-    padding: 9px 14px;
-    border: 1px solid var(--border);
-    border-radius: 7px;
-    background: var(--surface);
-    color: #d2dceb;
-    font-size: 0.88rem;
-  }
-
-  /* Footer */
-
-  .portfolio .site-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 28px 0;
-    border-top: 1px solid var(--border);
-    color: var(--muted);
-    font-size: 0.83rem;
-  }
-
-  .portfolio .site-footer p {
-    margin: 0;
-  }
-
-  .portfolio .footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-  }
-
-  .portfolio .footer-links a {
-    color: var(--muted);
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 25px;
     text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #61dafb, #007acc);
+    transition: background 0.3s ease, transform 0.2s ease;
   }
 
-  .portfolio .footer-links a:hover {
-    color: var(--accent-bright);
+  .btn:hover {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    transform: scale(1.05);
   }
 
-  /* Responsive design */
-
-  @media (max-width: 760px) {
-    .portfolio {
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-
-    .portfolio .site-header {
-      align-items: flex-start;
-    }
-
-    .portfolio .nav-links {
-      justify-content: flex-end;
-      gap: 12px 16px;
-    }
-
-    .portfolio .hero {
-      grid-template-columns: 1fr;
-      gap: 40px;
-      padding: 65px 0;
-    }
-
-    .portfolio .hero-content {
-      order: 1;
-    }
-
-    .portfolio .profile-wrap {
-      width: min(220px, 70%);
-      justify-self: start;
-    }
-
-    .portfolio .about-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .portfolio .expertise-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .portfolio .section {
-      padding: 48px 0;
-    }
+  footer {
+    margin-top: 60px;
+    font-size: 0.9em;
+    color: #aaaaaa;
   }
 
-  @media (max-width: 480px) {
-    .portfolio .site-header {
-      flex-direction: column;
-      gap: 12px;
+  @media (max-width: 768px) {
+    .container {
+      margin: 40px 20px;
+      padding: 30px 20px;
     }
 
-    .portfolio .nav-links {
-      justify-content: flex-start;
-    }
-
-    .portfolio .hero h1 {
-      font-size: 2.7rem;
-    }
-
-    .portfolio .expertise-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .portfolio .hero-actions .button {
-      flex: 1 1 auto;
-    }
-
-    .portfolio .site-footer {
-      align-items: flex-start;
-      flex-direction: column;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .portfolio *,
-    .portfolio *::before,
-    .portfolio *::after {
-      scroll-behavior: auto !important;
-      transition: none !important;
-      animation: none !important;
+    h1 {
+      font-size: 2em;
     }
   }
 </style>
 
-<div class="portfolio">
+<div class="container">
+  <img
+    class="avatar"
+    src="https://avatars.githubusercontent.com/u/42680795?s=400&u=490593d6e11537e90397cc5f182846b24d158904&v=4"
+    alt="Samuel Mwangi Avatar"
+  />
 
-  <header class="site-header">
-    <a class="brand" href="/" aria-label="Samuel Mwangi home">
-      SM<span>.</span>
-    </a>
+  <h1>Samuel Mwangi</h1>
+  <h2>Educator | Software Developer | Cybersecurity Specialist</h2>
 
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#skills">Skills</a>
-      <a href="/about/">More about me</a>
-    </nav>
-  </header>
+  <p>
+    I am a <strong>Computer Science and Mathematics educator</strong> with a strong background in 
+    <strong>software development</strong> and <strong>cybersecurity</strong>. I combine classroom experience 
+    with hands-on technical expertise to build secure, scalable, and practical solutions.
+  </p>
 
-  <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-content">
-        <p class="eyebrow">Welcome to my portfolio</p>
+  <div class="roles">
+    <div class="role">👨‍🏫 Educator (Computer Science & Mathematics)</div>
+    <div class="role">💻 Full-Stack Developer (MERN, Python)</div>
+    <div class="role">🔒 Cybersecurity Specialist</div>
+    <div class="role">📊 Data Analyst (ALX Certified)</div>
+    <div class="role">🧠 Data Science (In Progress)</div>
+  </div>
 
-        <h1 id="hero-title">
-          Samuel Mwangi
-          <span>Building. Securing. Teaching.</span>
-        </h1>
+  <p>
+    With over <strong>5 years of experience</strong>, I have developed and deployed applications using 
+    modern technologies including <strong>JavaScript (MERN)</strong>, <strong>Python</strong>, and 
+    <strong>AWS</strong>. My current focus is on <strong>data science</strong>, where I aim to leverage 
+    data-driven insights to solve real-world problems.
+  </p>
 
-        <p class="hero-subtitle">
-          Educator · Software Developer · Cybersecurity Practitioner
-        </p>
+  <div class="btn-group">
+    <a href="/about/" class="btn">About</a>
+    <a href="mailto:bh4534927@gmail.com" class="btn">Contact</a>
+    <a href="https://www.freelancer.com/u/samuelmwangi729" class="btn" target="_blank">Freelancer</a>
+    <a href="https://github.com/samuelmwangi729" class="btn" target="_blank">GitHub</a>
+  </div>
 
-        <p class="hero-description">
-          I combine education, software engineering, and cybersecurity
-          to develop practical solutions, strengthen digital security,
-          and make technology easier to understand.
-        </p>
-
-        <div class="hero-actions">
-          <a class="button button-primary" href="#expertise">
-            Explore my expertise <span aria-hidden="true">→</span>
-          </a>
-
-          <a class="button" href="mailto:bh4534927@gmail.com">
-            Get in touch
-          </a>
-        </div>
-      </div>
-
-      <div class="profile-wrap">
-        <div class="profile-frame">
-          <img
-            class="avatar"
-            src="https://avatars.githubusercontent.com/u/42680795?s=400&u=490593d6e11537e90397cc5f182846b24d158904&v=4"
-            alt="Portrait of Samuel Mwangi"
-            width="400"
-            height="500"
-            fetchpriority="high"
-          />
-        </div>
-
-        <p class="profile-caption">
-          <strong>Samuel Mwangi</strong><br />
-          Technology, education & security
-        </p>
-      </div>
-    </section>
-
-    <section class="section" id="about" aria-labelledby="about-title">
-      <div class="section-heading">
-        <p class="section-label">01 / About me</p>
-        <h2 id="about-title">Technology with purpose.</h2>
-        <p>
-          Connecting technical expertise with education and real-world
-          problem-solving.
-        </p>
-      </div>
-
-      <div class="about-grid">
-        <p class="about-copy">
-          I am a <strong>Computer Science and Mathematics educator</strong>
-          with a background in software development and cybersecurity.
-          My work brings together classroom experience, practical
-          programming, and an interest in building secure and reliable
-          digital systems.
-
-          <br /><br />
-
-          With over <strong>5 years of experience</strong>, I have worked
-          with technologies including JavaScript, the MERN stack, Python,
-          and AWS. I continue to develop my skills in cybersecurity,
-          data analysis, and data science while exploring ways technology
-          can address practical challenges.
-        </p>
-
-        <aside class="focus-card">
-          <h3>Current interests</h3>
-          <p>
-            Cybersecurity and network defense, secure application
-            development, digital forensics, data analysis, and
-            technology education.
-          </p>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section" id="expertise" aria-labelledby="expertise-title">
-      <div class="section-heading">
-        <p class="section-label">02 / Expertise</p>
-        <h2 id="expertise-title">What I do</h2>
-        <p>
-          A combination of teaching, building software, and understanding
-          how to protect digital systems.
-        </p>
-      </div>
-
-      <div class="expertise-grid">
-        <article class="expertise-card">
-          <span class="card-number">01</span>
-          <h3>Education</h3>
-          <p>
-            Teaching Computer Science and Mathematics, simplifying
-            technical concepts, and helping learners develop practical
-            digital skills.
-          </p>
-        </article>
-
-        <article class="expertise-card">
-          <span class="card-number">02</span>
-          <h3>Software Development</h3>
-          <p>
-            Building web applications and backend services using
-            JavaScript, the MERN stack, Python, and related technologies.
-          </p>
-        </article>
-
-        <article class="expertise-card">
-          <span class="card-number">03</span>
-          <h3>Cybersecurity</h3>
-          <p>
-            Developing practical knowledge in network security,
-            penetration testing, security monitoring, digital forensics,
-            and incident response.
-          </p>
-        </article>
-
-        <article class="expertise-card">
-          <span class="card-number">04</span>
-          <h3>Data Analysis</h3>
-          <p>
-            Applying data analysis techniques to explore information,
-            identify patterns, and support evidence-based decisions.
-          </p>
-        </article>
-
-        <article class="expertise-card">
-          <span class="card-number">05</span>
-          <h3>Cloud & Infrastructure</h3>
-          <p>
-            Exploring cloud deployment, Linux administration,
-            networking, and the infrastructure behind reliable
-            online services.
-          </p>
-        </article>
-
-        <article class="expertise-card">
-          <span class="card-number">06</span>
-          <h3>Continuous Learning</h3>
-          <p>
-            Expanding my knowledge of data science, security
-            technologies, programming, and emerging computing practices.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="skills" aria-labelledby="skills-title">
-      <div class="section-heading">
-        <p class="section-label">03 / Technologies</p>
-        <h2 id="skills-title">Tools & technical interests</h2>
-        <p>
-          Technologies I have worked with or am actively exploring.
-        </p>
-      </div>
-
-      <ul class="skills-list" aria-label="Technical skills">
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>MongoDB</li>
-        <li>Python</li>
-        <li>AWS</li>
-        <li>Linux</li>
-        <li>Networking</li>
-        <li>Cybersecurity</li>
-        <li>Digital Forensics</li>
-        <li>Data Analysis</li>
-        <li>Data Science</li>
-      </ul>
-    </section>
-
-    <section class="section" aria-labelledby="connect-title">
-      <div class="section-heading">
-        <p class="section-label">04 / Connect</p>
-        <h2 id="connect-title">Let's connect.</h2>
-        <p>
-          Interested in software development, cybersecurity,
-          education, or collaborating on a technical project?
-          Feel free to reach out.
-        </p>
-      </div>
-
-      <div class="hero-actions">
-        <a class="button button-primary"
-           href="mailto:bh4534927@gmail.com">
-          Email me →
-        </a>
-
-        <a class="button"
-           href="https://github.com/samuelmwangi729"
-           target="_blank"
-           rel="noopener noreferrer">
-          GitHub ↗
-        </a>
-
-        <a class="button"
-           href="https://www.freelancer.com/u/samuelmwangi729"
-           target="_blank"
-           rel="noopener noreferrer">
-          Freelancer ↗
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>© 2026 Samuel Mwangi. Built with purpose.</p>
-
-    <div class="footer-links">
-      <a href="/about/">About</a>
-      <a href="https://github.com/samuelmwangi729"
-         target="_blank"
-         rel="noopener noreferrer">GitHub ↗</a>
-      <a href="mailto:bh4534927@gmail.com">Contact</a>
-    </div>
+  <footer>
+    <p>“The best way to predict the future is to invent it.” – Alan Kay</p>
+    <p>© 2026 Samuel Mwangi</p>
   </footer>
-
 </div>
